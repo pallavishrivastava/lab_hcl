@@ -1,0 +1,22 @@
+---
+# tasks file for win_service_config
+ - name: Install multiple packages
+   win_chocolatey:
+    name: "{{package_name}}"
+    params: "{{parameters}}"
+    state: present
+ - name: start the services
+   win_service:
+    name: "{{service_name}}"
+    state: restarted
+    start_mode: auto
+ - name: enable firewall port
+   win_firewall_rule:
+    name: "{{service_name}}"
+    localport: "{{local_port}}"
+    action: allow
+    direction: in
+    protocol: "{{protocol_name}}"
+    state: present
+    enabled: yes
+

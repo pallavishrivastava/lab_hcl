@@ -1,2 +1,8 @@
 ---
 # vars file for win_domain_user
+ user_info:
+   - { name: 'james', firstname: 'James', lastname: 'jockey', password: 'redhat@123' }
+   - { name: 'bill', firstname: 'Bill', lastname: 'gates', password: 'redhat@123' }
+   - { name: 'mickey', firstname: 'Mickey', lastname: 'mouse', password: 'redhat@123' }
+   - { name: 'donald', firstname: 'Donald', lastname: 'duck', password: 'redhat@123' }
+
